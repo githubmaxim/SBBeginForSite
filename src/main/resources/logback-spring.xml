@@ -1,0 +1,32 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!--<?xml version = "1.0" encoding = "windows-1251"?>-->
+
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter"> <!--отбрасывает все события ниже указанного уровня-->
+            <!--        <filter class="ch.qos.logback.classic.filter.LevelFilter">--> <!-- выбирает события четко указанного уровня&ndash;&gt;-->
+            <level>INFO</level> <!--(2-й уровень урезания уровня вывода)-->
+            <!--            <onMatch>ACCEPT</onMatch>--> <!--для LevelFilter-->
+            <!--            <onMismatch>DENY</onMismatch>--> <!--для LevelFilter-->
+        </filter>
+        <encoder>
+            <pattern>%-35(%d{HH:mm:ss.SSS} [%thread]) %highlight(%-5level) %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+
+    <logger name="com.example.demo2.controller" additivity="false" level="INFO"> <!-- "level="INFO" это (3-й уровень урезания уровня вывода), а "name" это путь к папке с файлами из которых будет создаваться log-файл(имя которого задается в аппендере)-->
+        <appender-ref ref="STDOUT"/>
+    </logger>
+    <logger name="com.example.demo2.service" additivity="false" level="INFO"> <!--тут "name" это путь к папке с файлами из которых будет создаваться log-файл(имя которого задается в аппендере)-->
+        <appender-ref ref="STDOUT"/>
+    </logger>
+    <logger name="com.example.demo2.repository" additivity="false" level="INFO"> <!--тут "name" это путь к папке с файлами из которых будет создаваться log-файл(имя которого задается в аппендере)-->
+        <appender-ref ref="STDOUT"/>
+    </logger>
+
+
+    <root level="INFO">  <!-- устанавливаем максимально возможную зону видимости (1-й уровень урезания уровня вывода)-->
+        <appender-ref ref="STDOUT"/> <!-- подгружаем аппендеры, которые будут действовать -->
+    </root>
+</configuration>
