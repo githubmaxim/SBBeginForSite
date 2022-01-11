@@ -21,7 +21,7 @@ import java.util.List;
 @RequestMapping("/admin")
 @AllArgsConstructor
 @Slf4j
-@PreAuthorize("hasAuthority('ADMIN')") //это + еще в файле WebSecurityConfig.java нужно над классом дописать "@EnableGlobalMethodSecurity(prePostEnabled = true)" , для запуска механизма допуска к методам данного контроллера только с ролью "ADMIN'  при нашем "auth.jdbcAuthentication()" (вместо стандартных ".antMatchers("/admin/**").hasRole("ADMIN")" при "auth.inMemoryAuthentication()").
+@PreAuthorize("hasAuthority('ADMIN')") //это и плюс еще в файле WebSecurityConfig.java нужно над классом дописать "@EnableGlobalMethodSecurity(prePostEnabled = true)" , для запуска механизма допуска к методам данного контроллера только с ролью "ADMIN'  при нашем "auth.jdbcAuthentication()" (вместо стандартных ".antMatchers("/admin/**").hasRole("ADMIN")" при "auth.inMemoryAuthentication()").
                                        // Эта аннотация также может ставиться не для всего класса, а только над нужными методами.
 public class AdminController {
 
