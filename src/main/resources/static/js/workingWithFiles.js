@@ -14,7 +14,8 @@ function loadAllFilesInfo() {
 alert('Запустился скрипт-файл workingWithFiles');
                $.ajax({
                          type: "GET",
-                         url: "https://localhost:443/filesInfo/findAllFilesName",
+                         url: "https://sbbegin.herokuapp.com:$PORT/filesInfo/findAllFilesName",
+//                         url: "https://localhost:443/filesInfo/findAllFilesName",
 //                         url: "http://localhost:8080/filesInfo/findAllFilesName",
                          dataType: 'json',
                          success:  function (filesName, status, xhr) {
