@@ -11,7 +11,6 @@
 
 
 function loadAllFilesInfo() {
-alert('Запустился скрипт-файл workingWithFiles');
                $.ajax({
                          type: "GET",
                          url: "https://sbbegin.herokuapp.com/filesInfo/findAllFilesName",

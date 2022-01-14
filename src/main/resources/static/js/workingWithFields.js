@@ -52,7 +52,6 @@ function findByLogin() {
 
 
 function loadAllUsers() {
-alert('Запустился скрипт-файл workingWithFields');
                $.ajax({
                          type: "GET",
                          url: "https://sbbegin.herokuapp.com/users/findAll",

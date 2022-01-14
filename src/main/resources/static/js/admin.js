@@ -17,7 +17,6 @@
 //       });
 
 function loadAllLogPas() {
-alert( 'Запустился скрипт admin.js!' );
                $.ajax({
                          type: "GET",
                          url: "https://sbbegin.herokuapp.com/admin/findAll",
