@@ -41,7 +41,8 @@ alert('Запустился скрипт-файл workingWithFiles');
  }
 
 function downloadFileInfo(fileName) {
-         window.location.assign("https://localhost:443/filesInfo/download?param1=" + fileName);
+         window.location.assign("https://sbbegin.herokuapp.com/filesInfo/download?param1=" + fileName);
+//         window.location.assign("https://localhost:443/filesInfo/download?param1=" + fileName);
 //         window.location.assign("http://localhost:8080/filesInfo/download?param1=" + fileName);
 // если использовать на сервере механизм @PathVariable, то -  window.location.assign("http://localhost:8080/filesInfo/download/" + fileName);
 }
@@ -49,7 +50,8 @@ function downloadFileInfo(fileName) {
 function deleteFileInfo(fileName) {
              $.ajax({
                         type: "DELETE",
-                        url: "https://localhost:443/filesInfo/delete/" + fileName,
+                        url: "https://sbbegin.herokuapp.com/filesInfo/delete/" + fileName,
+//                        url: "https://localhost:443/filesInfo/delete/" + fileName,
 //                        url: "http://localhost:8080/filesInfo/delete/" + fileName,
                         error: function (jqXHR, exception) {
                                myError(jqXHR, exception);
@@ -69,7 +71,8 @@ function downloadFile() {
 //         window.location.assign("http://localhost:8080/users/download/empty");
 
     } else {
-         window.location.assign("https://localhost:443/filesInfo/download?param1=" + fileName);
+         window.location.assign("https://sbbegin.herokuapp.com/filesInfo/download?param1=" + fileName);
+//         window.location.assign("https://localhost:443/filesInfo/download?param1=" + fileName);
 //         window.location.assign("http://localhost:8080/filesInfo/download?param1=" + fileName);
 //         window.location.assign("http://localhost:8080/filesInfo/download/" + fileName);
     }
@@ -95,7 +98,8 @@ function uploadFile() {
 
 		$.ajax({
 			type: "POST",
-			url: "https://localhost:443/filesInfo/upload",
+			url: "https://sbbegin.herokuapp.com/filesInfo/upload",
+//			url: "https://localhost:443/filesInfo/upload",
 //			url: "http://localhost:8080/filesInfo/upload",
 			cache: false,
 			contentType: false,

@@ -57,7 +57,8 @@ function deleteLogPas(userId) {
              $.ajax({
                         dataType: 'json',
                         type: "DELETE",
-                        url: "https://localhost:443/admin/delete/" + userId,
+                        url: "https://sbbegin.herokuapp.com/admin/delete/" + userId,
+//                        url: "https://localhost:443/admin/delete/" + userId,
 //                        url: "http://localhost:8080/admin/delete/" + userId,
                         error: function (jqXHR, exception) {
                                myError(jqXHR, exception);
@@ -73,7 +74,8 @@ function changeRoleLogPas(userId) {
 
         $.ajax({
                         type: "PUT",
-                        url: "https://localhost:443/admin/put/" + userId,
+                        url: "https://sbbegin.herokuapp.com/admin/put/" + userId,
+//                        url: "https://localhost:443/admin/put/" + userId,
 //                        url: "http://localhost:8080/admin/put/" + userId,
                         contentType: 'application/json',
                         data: {"":logpas},  //одно слово получилось передать на сервер только таким специфическим образом
