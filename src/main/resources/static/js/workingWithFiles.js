@@ -11,7 +11,7 @@
 
 
 function loadAllFilesInfo() {
-
+alert('Запустился скрипт-файл workingWithFiles');
                $.ajax({
                          type: "GET",
                          url: "https://localhost:443/filesInfo/findAllFilesName",

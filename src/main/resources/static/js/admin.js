@@ -17,6 +17,7 @@
 //       });
 
 function loadAllLogPas() {
+alert( 'Запустился скрипт admin.js!' );
                $.ajax({
                          type: "GET",
                          url: "https://localhost:443/admin/findAll",

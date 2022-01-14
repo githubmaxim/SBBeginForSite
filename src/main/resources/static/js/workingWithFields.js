@@ -49,6 +49,7 @@ function findByLogin() {
 
 
 function loadAllUsers() {
+alert('Запустился скрипт-файл workingWithFields');
                $.ajax({
                          type: "GET",
                          url: "https://localhost:443/users/findAll",
