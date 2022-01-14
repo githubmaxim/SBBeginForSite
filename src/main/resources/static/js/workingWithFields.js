@@ -52,7 +52,8 @@ function loadAllUsers() {
 alert('Запустился скрипт-файл workingWithFields');
                $.ajax({
                          type: "GET",
-                         url: "https://sbbegin.herokuapp.com:$PORT/users/findAll",
+                         url: "https://sbbegin.herokuapp.com/users/findAll",
+//                         url: "https://sbbegin.herokuapp.com:$PORT/users/findAll",
 //                         url: "https://localhost:443/users/findAll",
 //                         url: "http://localhost:8080/users/findAll",
                          dataType: 'json',

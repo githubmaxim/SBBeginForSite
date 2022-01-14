@@ -20,7 +20,8 @@ function loadAllLogPas() {
 alert( 'Запустился скрипт admin.js!' );
                $.ajax({
                          type: "GET",
-                         url: "https://sbbegin.herokuapp.com:$PORT/admin/findAll",
+                         url: "https://sbbegin.herokuapp.com/admin/findAll",
+//                         url: "https://sbbegin.herokuapp.com:$PORT/admin/findAll",
 //                         url: "https://localhost:443/admin/findAll",
 //                         url: "http://localhost:8080/admin/findAll",
                          dataType: 'json',
